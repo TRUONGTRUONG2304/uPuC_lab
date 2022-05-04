@@ -1,0 +1,23 @@
+11:39:28 **** Incremental Build of configuration Debug for project Exercise9 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Exercise9.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\STM32CubeIDE\LAB2\Exercise9\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Exercise9.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Exercise9.elf
+ 
+arm-none-eabi-size   Exercise9.elf 
+arm-none-eabi-objdump -h -S  Exercise9.elf  > "Exercise9.list"
+arm-none-eabi-objcopy  -O ihex  Exercise9.elf  "Exercise9.hex"
+arm-none-eabi-objcopy  -O binary  Exercise9.elf  "Exercise9.bin"
+   text	   data	    bss	    dec	    hex	filename
+   7564	     36	   1652	   9252	   2424	Exercise9.elf
+Finished building: default.size.stdout
+ 
+Finished building: Exercise9.hex
+Finished building: Exercise9.bin
+ 
+ 
+Finished building: Exercise9.list
+ 
+
+11:39:29 Build Finished. 0 errors, 0 warnings. (took 818ms)
+

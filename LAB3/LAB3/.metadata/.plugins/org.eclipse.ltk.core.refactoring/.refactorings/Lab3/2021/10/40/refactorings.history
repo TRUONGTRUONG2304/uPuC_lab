@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Lab3/Core/Inc/variable_global&apos; to &apos;variable_global.h&apos;" description="Rename resource &apos;variable_global&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Inc/variable_global" name="variable_global.h" stamp="1633056074736" updateReferences="true"/>
+</session>

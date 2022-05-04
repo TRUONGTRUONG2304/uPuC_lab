@@ -1,0 +1,22 @@
+22:30:06 **** Build of configuration Debug for project Exercise1 ****
+make -j8 all 
+arm-none-eabi-gcc -o "Exercise1.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\STM32CubeIDE\LAB1\Exercise1\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Exercise1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Exercise1.elf
+ 
+arm-none-eabi-size   Exercise1.elf 
+arm-none-eabi-objdump -h -S  Exercise1.elf  > "Exercise1.list"
+arm-none-eabi-objcopy  -O ihex  Exercise1.elf  "Exercise1.hex"
+arm-none-eabi-objcopy  -O binary  Exercise1.elf  "Exercise1.bin"
+   text	   data	    bss	    dec	    hex	filename
+   4652	     20	   1572	   6244	   1864	Exercise1.elf
+Finished building: default.size.stdout
+ 
+Finished building: Exercise1.hex
+Finished building: Exercise1.bin
+ 
+ 
+Finished building: Exercise1.list
+ 
+
+22:30:07 Build Finished. 0 errors, 0 warnings. (took 649ms)
+

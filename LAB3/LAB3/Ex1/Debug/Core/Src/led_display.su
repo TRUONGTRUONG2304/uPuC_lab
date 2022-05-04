@@ -1,0 +1,2 @@
+led_display.c:10:6:increaseDisplayLed	16	static
+led_display.c:48:6:resetLED	8	static

@@ -1,0 +1,3 @@
+input_processing.c:12:6:fsm_for_input_processing	8	static
+input_processing.c:85:18:getBtnFirstState	4	static
+input_processing.c:88:18:getBtnSecondState	4	static

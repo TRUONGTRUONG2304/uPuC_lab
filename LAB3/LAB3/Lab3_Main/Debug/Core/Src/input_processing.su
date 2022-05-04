@@ -1,0 +1,4 @@
+input_processing.c:19:6:setTimer	16	static
+input_processing.c:23:6:timer_run_proc	4	static
+input_processing.c:30:6:fsm_for_input_processing	8	static
+input_processing.c:191:5:getMode	4	static

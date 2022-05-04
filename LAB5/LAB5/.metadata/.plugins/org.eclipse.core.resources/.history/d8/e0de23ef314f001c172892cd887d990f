@@ -1,0 +1,13 @@
+/*
+ * timer.c
+ *
+ *  Created on: Nov 27, 2021
+ *      Author: PHITRUONG
+ */
+#include "timer.h"
+
+
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef * htim){
+	timer_run();
+// YOUR OTHER CODE
+}

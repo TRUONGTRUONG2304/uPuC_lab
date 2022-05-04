@@ -1,0 +1,20 @@
+17:10:34 **** Incremental Build of configuration Debug for project lab4-new ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/scheduler.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/scheduler.d" -MT"Core/Src/scheduler.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/scheduler.o"
+arm-none-eabi-gcc -o "lab4-new.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\STM32CubeIDE\LAB4\lab4-new\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab4-new.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab4-new.elf
+ 
+arm-none-eabi-size   lab4-new.elf 
+arm-none-eabi-objdump -h -S  lab4-new.elf  > "lab4-new.list"
+arm-none-eabi-objcopy  -O ihex  lab4-new.elf  "lab4-new.hex"
+arm-none-eabi-objcopy  -O binary  lab4-new.elf  "lab4-new.bin"
+   text	   data	    bss	    dec	    hex	filename
+  11812	     20	   1964	  13796	   35e4	lab4-new.elf
+Finished building: default.size.stdout
+ 
+Finished building: lab4-new.hex
+Finished building: lab4-new.bin
+ 
+ 
+Finished building: lab4-new.list
+ 
